@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstdio>
+#include <queue>
+
+using namespace std;
+priority_queue<int,vector<int>,greater<int> >q;
+
+int main()
+{
+    int n;
+    int data;
+    cin>>n;
+    for (int i=1;i<=n;i++)
+    {
+        cin>>data;
+        q.push(data);
+    }
+    while (!q.empty())
+    {
+        cout<<q.top()<<' ';
+        q.pop();
+    }
+    return 0;
+}
